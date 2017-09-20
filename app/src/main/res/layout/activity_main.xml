@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main"
+    tools:context="com.example.hp1.finalproject.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:text="FOODUCATE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv"
+        android:layout_gravity="bottom"
+
+        android:textAlignment="center"
+        android:paddingTop="20dp"
+        android:typeface="serif"
+        android:textSize="40sp"
+        android:textStyle="normal|bold"
+        android:textColor="?attr/colorControlActivated" />
+</LinearLayout>
