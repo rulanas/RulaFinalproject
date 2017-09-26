@@ -10,7 +10,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="FOODUCATE"
+        android:text="LOOSE IT!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tv"
@@ -22,4 +22,39 @@
         android:textSize="40sp"
         android:textStyle="normal|bold"
         android:textColor="?attr/colorControlActivated" />
+
+    <EditText
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/username"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="50dp"
+        android:text="Username" />
+
+    <EditText
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:text="******" />
+
+    <Button
+        android:text="Log In"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:layout_marginLeft="135dp" />
+
+    <Button
+        android:text="sign up"
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="60dp" />
 </LinearLayout>
