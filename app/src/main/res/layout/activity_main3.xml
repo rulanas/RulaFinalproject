@@ -11,10 +11,13 @@
 
 
     <TextView
-        android:text="TextView"
+        android:text="User Name:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textview" />
+        android:id="@+id/textview"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-condensed" />
 
     <EditText
         android:layout_width="match_parent"
@@ -27,36 +30,48 @@
 
 
     <TextView
-        android:text="TextView"
+        android:text="Password:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/textView3"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal|bold" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/password" />
+        android:id="@+id/password2"
+        android:text="*****" />
 
     <TextView
-        android:text="TextView"
+        android:text="Height:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView4"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"
         android:ems="10"
-        android:id="@+id/height" />
+        android:id="@+id/height"
+        android:text="00.0cm" />
 
     <TextView
-        android:text="TextView"
+        android:text="Age:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal|bold"
+        android:textAllCaps="false" />
 
     <EditText
         android:layout_width="match_parent"
@@ -64,4 +79,5 @@
         android:inputType="numberSigned"
         android:ems="10"
         android:id="@+id/age" />
+
 </LinearLayout>
