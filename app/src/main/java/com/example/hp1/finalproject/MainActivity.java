@@ -1,6 +1,8 @@
 package com.example.hp1.finalproject;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,8 +39,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
         if(v==login){
-            Intent i1=new Intent(this,Main2Activity.class);
-            startActivity(i1);
+            String user=username.getText().toString()
+                    ,pass=password.getText().toString();
+            if((!user.equals(""))&&(!pass.equals("")))
+            {
+                Intent i1=new Intent(this,Main2Activity.class);
+                startActivity(i1);
+            }
+            else{
+                AlertDialog.Builder builder= new AlertDialog.Builder(this);
+                builder.setCancelable(true);
+                builder.setTitle("login");
+                builder.setMessage("you missed something");
+                builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.create().show();
+            }
         }
     }
 }
