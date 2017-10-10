@@ -16,16 +16,23 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemClickListener,View.OnClickListener{
- Button btreset;
+
+    Button btreset;
     ListView lvItems;
+    Cups cups;
     ArrayList<Item> items = new ArrayList<Item>();
     ImageView[][] imvWater=new ImageView[3][3];
     int[][] imvWater_id={{R.id.im1,R.id.im2,R.id.im3},{R.id.im4,R.id.im5,R.id.im6},{R.id.im7,R.id.im8,R.id.im9}};
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+    //    cups=(Cups)findViewById(R.id.cups);
         for(int i=0; i<3; i++)
             for(int j=0; j<3; j++) {
                 imvWater[i][j] = (ImageView) findViewById(imvWater_id[i][j]);
@@ -43,10 +50,27 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         btreset.setOnClickListener(this);
         CustomAdapter adapter = new CustomAdapter(this, R.layout.custom_row, items);
         lvItems.setAdapter(adapter);
+
+        lvItems.setOnItemClickListener(this);
+
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        if(position==0)
+        {
+            Intent i3=new Intent(this,Main4Activity.class);
+            startActivity(i3);
+        }
+
+
+        if(position==1)
+        {
+            Intent i4 = new Intent(this,Main5Activity.class);
+            startActivity(i4);
+        }
     }
 
     @Override

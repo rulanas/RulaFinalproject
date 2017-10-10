@@ -24,10 +24,14 @@
         android:weightSum="1">
 
         <TextView
-            android:text="TextView"
+            android:text="FIRST MEAL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" />
+            android:id="@+id/textView2"
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="false"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -37,10 +41,12 @@
             android:id="@+id/editText4" />
 
         <TextView
-            android:text="TextView"
+            android:text="SECOND MEAL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView7" />
+            android:id="@+id/textView7"
+            android:textStyle="normal|bold|italic"
+            android:textSize="18sp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -50,10 +56,13 @@
             android:id="@+id/editText6" />
 
         <TextView
-            android:text="TextView"
+            android:text="THIRD MEAL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8" />
+            android:id="@+id/textView8"
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -63,7 +72,7 @@
             android:id="@+id/editText8" />
 
         <TextView
-            android:text="TextView"
+            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView9"
