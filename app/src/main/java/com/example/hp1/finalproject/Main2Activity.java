@@ -19,7 +19,6 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
     Button btreset;
     ListView lvItems;
-    Cups cups;
     ArrayList<Item> items = new ArrayList<Item>();
     ImageView[][] imvWater=new ImageView[3][3];
     int[][] imvWater_id={{R.id.im1,R.id.im2,R.id.im3},{R.id.im4,R.id.im5,R.id.im6},{R.id.im7,R.id.im8,R.id.im9}};
@@ -32,7 +31,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-    //    cups=(Cups)findViewById(R.id.cups);
+
         for(int i=0; i<3; i++)
             for(int j=0; j<3; j++) {
                 imvWater[i][j] = (ImageView) findViewById(imvWater_id[i][j]);
@@ -42,8 +41,8 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         lvItems=(ListView)findViewById(R.id.lvItems);
         btreset=(Button)findViewById(R.id.btreset);
 
-        items.add(new Item("Third Item",R.drawable.fo));
-        items.add(new Item("Third Item",R.drawable.ch));
+        items.add(new Item("First Item",R.drawable.fo));
+        items.add(new Item("Second Item",R.drawable.ch));
         items.add(new Item("Third Item",R.drawable.spor));
         items.add(new Item("Third Item",R.drawable.info));
 
