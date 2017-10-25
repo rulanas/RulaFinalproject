@@ -2,6 +2,7 @@ package com.example.hp1.finalproject;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,6 +34,9 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     static final int SELECT_IMAGE=1;
     static final int TAKE_IMAGE=0;
 
+
+    SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +55,19 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
         btGalery.setOnClickListener(this);
         submit.setOnClickListener(this);
 
+        preferences  = this.getSharedPreferences("profile",MODE_PRIVATE);
+
+        name.setText(preferences.getString("user",null));
+        pass3.setText(preferences.getString("pass",null));
+        age.setText(preferences.getString("old",null));
+        height.setText(preferences.getString("height",null));
+
+
+        String path = preferences.getString("image",null);
+        if(path != null) {
+            bitmap = BitmapFactory.decodeFile(path);
+            imageView.setImageBitmap(bitmap);
+        }
 
         if(!hasCamera()){
             btCamera.setEnabled(false);
@@ -59,13 +76,18 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     private boolean hasCamera(){
         return getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
     }
+
     @Override
     public void onClick(View v) {
 
        if(v==submit) {
+           SharedPreferences.Editor editor = preferences.edit();
            String user = name.getText().toString(), pass = pass3.getText().toString(), old = age.getText().toString(),
                    heightt = height.getText().toString();
-
+                   editor.putString("user",user);
+           editor.putString("pass",pass);
+           editor.putString("old",old);
+           editor.putString("height",heightt);
            if ((!user.equals("")) && (!pass.equals("")) && (!old.equals("") && (!heightt.equals("")))) {
                Intent i4 = new Intent(this, Main2Activity.class);
                startActivity(i4);
@@ -82,6 +104,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
                });
                builder.create().show();
            }
+           editor.commit();
        }
 
         if(v==btCamera){
@@ -123,9 +146,16 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
 
         public File saveImage(Bitmap bitmap) {
 
+
+            SharedPreferences.Editor editor = preferences.edit();
+
             File root = Environment.getExternalStorageDirectory();// internal storage launching .
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            String filePath=root.getAbsolutePath()+"/DCIM/Camera/IMG"+timeStamp+"/jpg";
+            String filePath=root.getAbsolutePath()+"/DCIM/Camera/IMG"+timeStamp+".jpg";
+
+            editor.putString("image",filePath);
+            editor.commit();
+
             File file=new File(filePath);
                 try {
                     // if gallary nit full create a file and save images
