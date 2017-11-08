@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context="com.example.hp1.finalproject.RecipeDetailsActivity">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvRecipeDetails"
-        android:textStyle="normal|bold"
-        android:textSize="12sp"
-        android:textColor="@android:color/black"
-        android:textAllCaps="false" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvRecipeDetails"
+                android:textStyle="normal|bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
