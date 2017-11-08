@@ -67,7 +67,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
         if(position==1)
         {
-            Intent i4 = new Intent(this,Main5Activity.class);
+            Intent i4 = new Intent(this,AllRecipeActivity.class);
             startActivity(i4);
         }
     }
