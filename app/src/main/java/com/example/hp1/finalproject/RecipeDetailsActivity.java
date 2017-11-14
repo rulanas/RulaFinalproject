@@ -43,6 +43,33 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         if(recipe.equals("creamypasta")){
             is=getResources().openRawResource(R.raw.creamypasta);
         }
+        if(recipe.equals("mozzarella")){
+            is=getResources().openRawResource(R.raw.mozzarella);
+        }
+        if(recipe.equals("soupwithpesto")){
+            is=getResources().openRawResource(R.raw.soupwithpesto);
+        }
+        if(recipe.equals("whitebeansalad")){
+            is=getResources().openRawResource(R.raw.whitebeansalad);
+        }
+        if(recipe.equals("swedishmeat")){
+            is=getResources().openRawResource(R.raw.swedishmeat);
+        }
+        if(recipe.equals("shrimpboy")){
+            is=getResources().openRawResource(R.raw.shrimpboy);
+        }
+        if(recipe.equals("hotchile")){
+            is=getResources().openRawResource(R.raw.hotchile);
+        }
+        if(recipe.equals("chili")){
+            is=getResources().openRawResource(R.raw.chili);
+        }
+        if(recipe.equals("eggsalad")){
+            is=getResources().openRawResource(R.raw.eggsalad);
+        }
+        if(recipe.equals("turkey")){
+            is=getResources().openRawResource(R.raw.turkey);
+        }
         try{
             temp="";
             all="";
