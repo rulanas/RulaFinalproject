@@ -18,11 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".Main3Activity" />
-        <activity android:name=".Main4Activity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".MealsActivity" />
         <activity android:name=".AllRecipeActivity" />
-        <activity android:name=".RecipeDetailsActivity"></activity>
+        <activity android:name=".RecipeDetailsActivity" />
+        <activity android:name=".ExercisesActivity" />
+        <activity android:name=".IngredientsActivity" />
+        <activity android:name=".PreperationActivity"></activity>
     </application>
 
 </manifest>

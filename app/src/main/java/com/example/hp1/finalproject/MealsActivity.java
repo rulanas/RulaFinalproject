@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Main4Activity extends AppCompatActivity implements View.OnClickListener{
+public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button cal;
     EditText fcal, scal, tcal;
@@ -16,7 +16,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_meals);
 
 
         cal=(Button)findViewById(R.id.cal);

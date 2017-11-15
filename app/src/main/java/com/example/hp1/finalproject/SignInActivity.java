@@ -24,7 +24,7 @@ import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Main3Activity extends AppCompatActivity implements View.OnClickListener{
+public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
     private Bitmap bitmap;
 
     private ImageView imageView;
@@ -40,7 +40,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_signin);
 
         height =(EditText) findViewById(R.id.height);
         pass3 =(EditText) findViewById(R.id.pass3);
@@ -89,7 +89,7 @@ public class Main3Activity extends AppCompatActivity implements View.OnClickList
            editor.putString("old",old);
            editor.putString("height",heightt);
            if ((!user.equals("")) && (!pass.equals("")) && (!old.equals("") && (!heightt.equals("")))) {
-               Intent i4 = new Intent(this, Main2Activity.class);
+               Intent i4 = new Intent(this, HomeActivity.class);
                startActivity(i4);
            } else {
                AlertDialog.Builder builder = new AlertDialog.Builder(this);

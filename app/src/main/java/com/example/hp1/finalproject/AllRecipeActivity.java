@@ -13,7 +13,7 @@ public class AllRecipeActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.activity_recipe_pic);
 
         a = (ImageButton) findViewById(R.id.a);
         a.setOnClickListener(this);

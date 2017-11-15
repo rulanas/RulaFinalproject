@@ -3,6 +3,10 @@ package com.example.hp1.finalproject;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -10,10 +14,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
-public class RecipeDetailsActivity extends AppCompatActivity {
+public class RecipeDetailsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
+    ListView lvRecipe;
     TextView tvRecipeDetails;
+    ArrayList<String> arRecipe = new ArrayList<String>();
     String recipe;
 
     @Override
@@ -21,11 +28,16 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_details);
 
-        tvRecipeDetails = (TextView) findViewById(R.id.tvRecipeDetails);
+        lvRecipe = (ListView) findViewById(R.id.lvRecipe);
+     //   tvRecipeDetails = (TextView) findViewById(R.id.tvRecipeDetails);
 
         Intent  i = getIntent();
         recipe = i.getStringExtra("recipe");
         loadRecipe(recipe);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arRecipe);
+        lvRecipe.setAdapter(adapter);
+        lvRecipe.setOnItemClickListener(this);
     }
     private void loadRecipe(String recipe){
         InputStream is=null;
@@ -79,14 +91,21 @@ public class RecipeDetailsActivity extends AppCompatActivity {
             br= new BufferedReader(in);
             //while end of file not reached
             //readline() reads one line at a time
-            while((temp=br.readLine())!=null)
-                all+=temp+"\n";//concatinate all lines to a string
+            while((temp=br.readLine())!=null) {
+                all += temp + "\n";//concatinate all lines to a string
+                arRecipe.add(temp);
+            }
             is.close();//file close
         }catch (FileNotFoundException e) {
             e.printStackTrace();
         }catch (IOException e) {
             e.printStackTrace();
         }
-        tvRecipeDetails.setText(all);
+      //  tvRecipeDetails.setText(all);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
     }
 }

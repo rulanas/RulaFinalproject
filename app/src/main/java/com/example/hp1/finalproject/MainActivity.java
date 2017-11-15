@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v==signup){
-            Intent i=new Intent(this,Main3Activity.class);
+            Intent i=new Intent(this,SignInActivity.class);
             startActivity(i);
         }
         if(v==login){
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     ,pass=password.getText().toString();
             if((!user.equals(""))&&(!pass.equals("")))
             {
-                Intent i1=new Intent(this,Main2Activity.class);
+                Intent i1=new Intent(this,HomeActivity.class);
                 startActivity(i1);
             }
             else{
