@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:background="@drawable/signup"
     tools:context="com.example.hp1.finalproject.MainActivity"
     android:weightSum="1">
@@ -13,22 +13,23 @@
 
 
     <ListView
-        android:layout_width="99dp"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="220dp"
         android:id="@+id/lvItems"
-        android:layout_weight="0.04" />
+        android:scrollbars="horizontal"
+        android:layout_weight="0.82" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="559dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:weightSum="1">
 
         <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="171dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="0.12">
+            android:layout_width="244dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
 
             <ImageView
                 android:layout_width="63dp"
@@ -101,34 +102,26 @@
 
         </GridLayout>
 
-        <Button
-            android:text="reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btreset" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65">
 
-        <Button
-            android:text="return"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnNotify"
-            />
+            <Button
+                android:text="return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNotify"
+                android:layout_weight="1" />
 
-        <TextView
-            android:text="
-       YOU
-
-                                             WILL
-                            LOOSEIT!"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:id="@+id/textView5"
-            android:textStyle="normal|bold"
-            android:textAllCaps="true"
-            android:textAlignment="textStart"
-            android:textSize="30sp"
-            android:textColor="@android:color/black"
-            android:layout_weight="0.62" />
+            <Button
+                android:text="reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btreset"
+                android:layout_weight="1" />
+        </LinearLayout>
 
 
     </LinearLayout>
