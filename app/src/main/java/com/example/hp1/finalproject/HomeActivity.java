@@ -117,6 +117,12 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
             Intent i5 = new Intent(this,ExercisesActivity.class);
             startActivity(i5);
         }
+
+        if(position==3)
+        {
+            Intent i6 = new Intent(this,InfoActivity.class);
+            startActivity(i6);
+        }
     }
 
     @Override

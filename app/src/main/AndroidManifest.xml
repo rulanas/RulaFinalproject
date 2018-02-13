@@ -26,7 +26,8 @@
         <activity android:name=".ExercisesActivity" />
         <activity android:name=".IngredientsActivity" />
         <activity android:name=".PreperationActivity" />
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".AllMealsActivity"></activity>
     </application>
 
 </manifest>
