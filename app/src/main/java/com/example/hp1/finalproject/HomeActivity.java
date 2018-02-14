@@ -47,8 +47,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         btreset=(Button)findViewById(R.id.btreset);
 
         items.add(new Item("First Item",R.drawable.fo));
-        items.add(new Item("Second Item",R.drawable.ch));
-        items.add(new Item("Third Item",R.drawable.spor));
+        items.add(new Item("Second Item",R.drawable.recc));
+        items.add(new Item("Third Item",R.drawable.wsp));
         items.add(new Item("Third Item",R.drawable.info));
 
         btreset.setOnClickListener(this);

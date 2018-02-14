@@ -6,30 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/signup"
+    android:background="@drawable/log"
     tools:context="com.example.hp1.finalproject.MainActivity"
     android:weightSum="1">
 
 
-
     <ListView
-        android:layout_width="wrap_content"
+        android:layout_width="131dp"
         android:layout_height="220dp"
         android:id="@+id/lvItems"
         android:scrollbars="horizontal"
-        android:layout_weight="0.82" />
+        android:layout_weight="0.91"
+
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        style="@style/Widget.AppCompat.Light.ListView.DropDown" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:weightSum="1">
+        android:weightSum="1"
+        >
 
         <GridLayout
             android:layout_width="244dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp">
 
             <ImageView
                 android:layout_width="63dp"
@@ -106,21 +111,24 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.65">
+            android:layout_weight="0.65"
+            android:weightSum="1">
 
             <Button
                 android:text="return"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:id="@+id/btnNotify"
-                android:layout_weight="1" />
+                android:background="@drawable/buttonshape"
+                android:layout_weight="0.44" />
 
             <Button
                 android:text="reset"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:id="@+id/btreset"
-                android:layout_weight="1" />
+                android:background="@drawable/buttonshape"
+                android:layout_weight="0.42" />
         </LinearLayout>
 
 

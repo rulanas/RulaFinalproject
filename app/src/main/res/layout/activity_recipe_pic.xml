@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/blue"
     tools:context="com.example.hp1.finalproject.MainActivity"
     android:weightSum="1">
 
@@ -18,10 +17,11 @@
         android:text="Click On Each Photo To Get The Full Recipe!"
         android:layout_marginTop="40dp"
         android:textColor="@android:color/black"
-        android:textStyle="normal|italic"
+        android:textStyle="normal|bold|italic"
         android:textAllCaps="true"
         android:textSize="24sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="cursive" />
 
     <GridLayout
         android:layout_width="wrap_content"

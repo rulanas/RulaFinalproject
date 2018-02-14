@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/signup"
+    android:background="@drawable/log"
     tools:context="com.example.hp1.finalproject.MainActivity"
     android:weightSum="1">
 
@@ -18,17 +18,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textStyle="normal|bold|italic"
-        android:textAllCaps="false"
+        android:textAllCaps="true"
         android:textAlignment="viewStart"
         android:textSize="24sp"
-        android:textColor="?android:attr/textColorLinkInverse" />
+        android:textColor="?android:attr/colorLongPressedHighlight"
+        android:fontFamily="cursive" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/fcal" />
+        android:id="@+id/fcal"
+        android:background="@drawable/buttonshape"
+        android:layout_weight="0.09" />
 
     <TextView
         android:text="SECOND MEAL CAL"
@@ -38,14 +41,17 @@
         android:textStyle="normal|bold|italic"
         android:textSize="24sp"
         android:layout_marginTop="20dp"
-        android:textColor="?android:attr/textColorLinkInverse" />
+        android:textColor="?android:attr/colorLongPressedHighlight"
+        android:fontFamily="cursive" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/scal" />
+        android:id="@+id/scal"
+        android:background="@drawable/buttonshape"
+        android:layout_weight="0.10" />
 
     <TextView
         android:text="THIRD MEAL CAL"
@@ -56,14 +62,17 @@
         android:textAllCaps="true"
         android:textSize="24sp"
         android:layout_marginTop="20dp"
-        android:textColor="?android:attr/textColorLinkInverse" />
+        android:textColor="?android:attr/colorLongPressedHighlight"
+        android:fontFamily="cursive" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/tcal" />
+        android:id="@+id/tcal"
+        android:background="@drawable/buttonshape"
+        android:layout_weight="0.08" />
 
     <Button
         android:text="calculate"
@@ -72,15 +81,14 @@
         android:id="@+id/cal"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="70dp"
-        android:typeface="normal"
         android:elevation="0dp"
-        android:background="@drawable/blue"
         android:visibility="visible"
         style="@android:style/Widget.Material.Light.Button.Inset"
         android:textStyle="normal|bold|italic"
         android:textSize="30sp"
-        android:fontFamily="serif-monospace"
-        android:textColor="@color/colorAccent" />
+        android:fontFamily="cursive"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/buttonshape"/>
 
     <TextView
         android:text=""
@@ -90,11 +98,11 @@
         android:layout_marginTop="20dp"
         android:layout_weight="0.22"
         android:layout_marginLeft="40dp"
-        android:textStyle="normal|bold"
+        android:textStyle="normal|bold|italic"
         android:textAllCaps="true"
         android:textSize="30sp"
         android:textColor="@android:color/black"
-        android:fontFamily="monospace" />
+        android:fontFamily="cursive" />
 
 
 </LinearLayout>
