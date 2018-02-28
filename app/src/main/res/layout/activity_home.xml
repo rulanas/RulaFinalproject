@@ -36,7 +36,9 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp">
 
-            <ImageView
+
+
+           <ImageView
                 android:layout_width="63dp"
                 android:layout_height="61dp"
                 app:srcCompat="@drawable/water"
@@ -115,7 +117,7 @@
             android:weightSum="1">
 
             <Button
-                android:text="return"
+                android:text="motivate "
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
                 android:id="@+id/btnNotify"

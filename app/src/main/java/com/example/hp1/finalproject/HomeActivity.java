@@ -71,12 +71,11 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         //customize the builder
         builder.setSmallIcon(R.drawable.a);
         builder.setContentTitle("Notification Title");
-        builder.setContentText("Click here to go back ");
+
+            builder.setContentText("You can do it, keep drinking and eating well ");
+
 
         //
-        Intent bIntent = new Intent(this, MainActivity.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, bIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(contentIntent);
 
         btnNotify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -171,6 +170,10 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 break;
             case R.id.settings:
+
+                Intent i3 = new Intent(getBaseContext(), SignInActivity.class);
+                startActivity(i3);
+
                 break;
         }
         return super.onOptionsItemSelected(item);
