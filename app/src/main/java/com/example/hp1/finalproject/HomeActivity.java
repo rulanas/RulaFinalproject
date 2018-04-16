@@ -37,6 +37,9 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_home);
 
 
+        Intent music = new Intent(this, MyService.class);
+        startService(music);
+
         for(int i=0; i<3; i++)
             for(int j=0; j<3; j++) {
                 imvWater[i][j] = (ImageView) findViewById(imvWater_id[i][j]);

@@ -24,10 +24,13 @@
         <activity android:name=".AllRecipeActivity" />
         <activity android:name=".RecipeDetailsActivity" />
         <activity android:name=".ExercisesActivity" />
-        <activity android:name=".IngredientsActivity" />
-        <activity android:name=".PreperationActivity" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".AllMealsActivity"></activity>
+        <activity android:name=".AllMealsActivity" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

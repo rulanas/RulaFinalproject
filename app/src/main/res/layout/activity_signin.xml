@@ -54,9 +54,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/user2"
         android:textStyle="normal|bold"
-        android:textSize="24sp"
-        android:fontFamily="cursive"
-        android:layout_weight="0.27" />
+        android:textSize="30sp"
+        android:fontFamily="cursive" />
 
     <EditText
         android:layout_width="match_parent"

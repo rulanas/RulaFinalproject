@@ -108,7 +108,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
        }
 
         if(v==btCamera){
-            //start another activity and receive a result back in case the activity exists return 0
+            /** start another activity and receive a result back in case the activity exists return 0 */
             Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(i,TAKE_IMAGE );
         }if(v==btGalery){
